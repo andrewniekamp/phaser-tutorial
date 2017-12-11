@@ -14,7 +14,7 @@
 
 <script type="text/javascript">
 
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+let game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
 let platforms, player;
 
 function preload() {
@@ -53,6 +53,8 @@ function create() {
 }
 
 function update() {
+    // Collisions for player and stars against platforms
+    let hitPlatform = game.physics.arcade.collide(player, platforms);
 }
 
 </script>
